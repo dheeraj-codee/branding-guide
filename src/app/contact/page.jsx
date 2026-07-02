@@ -17,7 +17,7 @@ export default function ContactPage() {
     <main className="overflow-hidden bg-[#03111F] text-white">
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-24">
+      <section className="relative overflow-hidden py-18">
         
         <div className="absolute left-[-120px] top-10 h-[300px] w-[300px] rounded-full bg-[#086ED0]/20 blur-3xl" />
 
@@ -29,7 +29,7 @@ export default function ContactPage() {
             Contact Us
           </p>
 
-          <h1 className="mt-6 text-4xl font-black leading-tight md:text-6xl">
+          <h1 className="mt-6 text-3xl font-black leading-tight md:text-4xl lg:text-5xl">
             Let’s Build Something
             <span className="text-[#086ED0]"> Amazing </span>
             Together
@@ -222,11 +222,14 @@ export default function ContactPage() {
                 </label>
 
                 <select className="w-full rounded-2xl border border-white/10 bg-[#091827] px-5 py-3.5 text-white outline-none transition focus:border-[#086ED0]">
-                  <option>Website Development</option>
-                  <option>UI/UX Design</option>
-                  <option>SEO Optimization</option>
+                  
                   <option>Branding Design</option>
+                  <option>Logo Design</option>
+                  <option>Website Development</option>
+                  <option>Video Editing</option>                
                   <option>Packaging Design</option>
+                  <option>Social Media design</option>
+
                 </select>
               </div>
 

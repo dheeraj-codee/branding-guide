@@ -162,6 +162,13 @@ export default function Footer() {
               >
                 Packaging Design
               </Link>
+
+              <Link
+                href="/services/social-media-design"
+                className="text-sm text-white/60 transition hover:text-white"
+              >
+                Social Media Design
+              </Link>
             </div>
           </div>
 

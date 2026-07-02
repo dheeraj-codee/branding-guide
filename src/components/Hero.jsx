@@ -5,7 +5,7 @@ import { ArrowRight, Play } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#03111F] pb-24 pt-20">
+    <section className="relative overflow-hidden bg-[#03111F] pb-12 pt-10">
       
       {/* Glow Effects */}
       <div className="absolute left-[-120px] top-10 h-[320px] w-[320px] rounded-full bg-[#086ED0]/20 blur-3xl" />

@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function CtaBanner() {
   return (
-    <section className="relative overflow-hidden bg-[#03111F] py-24">
+    <section className="relative overflow-hidden bg-[#03111F] py-12">
       
       {/* Glow Effects */}
       <div className="absolute left-[-120px] top-0 h-[260px] w-[260px] rounded-full bg-[#086ED0]/10 blur-3xl" />

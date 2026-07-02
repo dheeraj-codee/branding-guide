@@ -15,6 +15,7 @@ export default function Header() {
     "Website Development",
     "Video Editing",
     "Packaging Design",
+    "Social Media Design",
   ];
 
   return (

@@ -8,7 +8,7 @@ export default function TrustedBrands() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[#03111F] py-24">
+    <section className="relative overflow-hidden bg-[#03111F] py-12">
       
       {/* Glow */}
       <div className="absolute left-[-100px] top-0 h-[250px] w-[250px] rounded-full bg-[#086ED0]/10 blur-3xl" />
