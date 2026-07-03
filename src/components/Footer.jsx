@@ -244,26 +244,22 @@ export default function Footer() {
             © 2026 Branding Guide. All rights reserved.
           </p>
 
-          <div className="flex items-center gap-6">
-            
+<div className="flex w-full justify-center gap-6 md:w-auto">            
             <Link
               href="/privacy-policy"
-              className="text-sm text-white/50 transition hover:text-white"
-            >
+className="text-center text-sm text-white/50 transition hover:text-white"            >
               Privacy Policy
             </Link>
 
             <Link
               href="/terms"
-              className="text-sm text-white/50 transition hover:text-white"
-            >
+className="text-center text-sm text-white/50 transition hover:text-white"            >
               Terms of Service
             </Link>
 
             <Link
               href="/refund-policy"
-              className="text-sm text-white/50 transition hover:text-white"
-            >
+className="text-center text-sm text-white/50 transition hover:text-white"            >
               Refund Policy
             </Link>
           </div>

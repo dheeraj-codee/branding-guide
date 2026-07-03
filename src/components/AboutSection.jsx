@@ -16,7 +16,7 @@ export default function AboutSection() {
         <div className="grid items-center gap-16 lg:grid-cols-2">
 
           {/* ---------------- Left Content ---------------- */}
-          <div>
+          <div className="text-center">
 
             {/* Small Label */}
             <p className="text-xs font-medium uppercase tracking-[5px] text-[#FF6D00] sm:text-sm">

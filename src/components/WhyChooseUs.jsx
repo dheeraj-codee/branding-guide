@@ -76,14 +76,12 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Cards */}
-        <div className="no-scrollbar mt-16 flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory lg:grid lg:grid-cols-3 lg:overflow-visible">
-          {features.map((feature, index) => {
+<div className="no-scrollbar mt-16 flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-2 md:overflow-visible lg:grid-cols-3">          {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
               <div
                 key={index}
-                className="group relative flex min-w-[280px] snap-center flex-col items-center overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03] p-8 text-center backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-white/20 lg:min-w-0"
-              >
+className="group relative flex min-w-[280px] snap-center flex-col items-center overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03] p-8 text-center backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-white/20 md:min-w-0"              >
 
                 {/* Hover Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[#086ED0]/10 to-[#FF6D00]/5 opacity-0 transition duration-500 group-hover:opacity-100" />

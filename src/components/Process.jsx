@@ -65,14 +65,13 @@ export default function Process() {
             <div className="absolute inset-0 animate-[flow_3s_linear_infinite] bg-gradient-to-r from-transparent via-[#FF6D00]/70 to-transparent bg-[length:40%_100%] bg-no-repeat" />
           </div>
 
-          <div className="no-scrollbar flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory lg:grid lg:grid-cols-4 lg:overflow-visible">
-            {process.map((item, index) => {
+<div className="no-scrollbar flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-2 md:overflow-visible lg:grid-cols-4">
+              {process.map((item, index) => {
               const Icon = item.icon;
               return (
                 <div
                   key={index}
-                  className="group relative min-w-[280px] snap-center overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.03] p-8 text-center backdrop-blur-xl transition-all duration-500 hover:-translate-y-3 hover:border-[#086ED0]/40 lg:min-w-0"
-                >
+className="group relative min-w-[280px] snap-center overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.03] p-8 text-center backdrop-blur-xl transition-all duration-500 hover:-translate-y-3 hover:border-[#086ED0]/40 md:min-w-0"                >
 
                   {/* Hover Gradient */}
                   <div className="absolute inset-0 bg-gradient-to-br from-[#086ED0]/10 to-[#FF6D00]/10 opacity-0 transition duration-500 group-hover:opacity-100" />

@@ -72,8 +72,7 @@ export default function Services() {
         </div>
 
         {/* Services Grid */}
-        <div className="no-scrollbar mt-16 flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-3 md:overflow-visible">
-
+<div className="no-scrollbar mt-16 flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3 md:overflow-visible">
           {services.map((service, index) => (
 
             <Link
@@ -107,15 +106,14 @@ export default function Services() {
               </div>
 
               {/* Content */}
-              <div className="relative mt-16">
-
+                <div className="relative mt-16 text-center">
                 <h3 className="text-xl font-black text-white md:text-2xl">
                   {service.title}
                 </h3>
 
-                <p className="mt-5 text-sm leading-7 text-white/60 sm:text-base">
-                  {service.desc}
-                </p>
+               <p className="mx-auto mt-5 max-w-[260px] text-sm leading-7 text-white/60 sm:text-base">
+  {service.desc}
+</p>
 
               </div>
 

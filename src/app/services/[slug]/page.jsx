@@ -368,7 +368,7 @@ export default function ServiceDetailPage() {
     <main className="relative overflow-hidden bg-[#03111F]">
 
       {/* ---------------- HERO ---------------- */}
-      <section className="relative overflow-hidden py-28">
+      <section className="relative overflow-hidden py-18">
 
         <div className="absolute left-[-120px] top-0 h-[320px] w-[320px] rounded-full bg-[#086ED0]/10 blur-3xl" />
         <div className="absolute bottom-0 right-[-120px] h-[320px] w-[320px] rounded-full bg-[#FF6D00]/10 blur-3xl" />
