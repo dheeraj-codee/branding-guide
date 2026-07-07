@@ -1,7 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 import {
   FiInstagram,
@@ -13,6 +15,59 @@ import {
 } from "react-icons/fi";
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    service: "Branding Design",
+    message: "",
+  });
+  const [isSending, setIsSending] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSending(true);
+
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      service: formData.service,
+      message: formData.message,
+    };
+
+    emailjs
+      .send(
+        "service_x08fgv9",
+        "template_6mq68wm",
+        templateParams,
+        "2wbbP8dwDmxZy7Kdr"
+      )
+      .then(() => {
+        setIsSending(false);
+        setShowSuccess(true);
+
+        setFormData({
+          name: "",
+          email: "",
+          service: "Branding Design",
+          message: "",
+        });
+
+        setTimeout(() => {
+          setShowSuccess(false);
+        }, 3000);
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        setIsSending(false);
+      });
+  };
+
   return (
     <main className="overflow-hidden bg-[#03111F] text-white">
       
@@ -187,7 +242,7 @@ export default function ContactPage() {
               premium digital project.
             </p>
 
-            <form className="mt-10 space-y-5">
+            <form onSubmit={handleSubmit} className="mt-10 space-y-5">
               
               {/* Name */}
               <div>
@@ -197,6 +252,10 @@ export default function ContactPage() {
 
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
                   placeholder="Enter your full name"
                   className="w-full rounded-2xl border border-white/10 bg-[#091827] px-5 py-3.5 text-white outline-none transition focus:border-[#086ED0]"
                 />
@@ -210,6 +269,10 @@ export default function ContactPage() {
 
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
                   placeholder="Enter your email address"
                   className="w-full rounded-2xl border border-white/10 bg-[#091827] px-5 py-3.5 text-white outline-none transition focus:border-[#086ED0]"
                 />
@@ -221,7 +284,12 @@ export default function ContactPage() {
                   Select Service
                 </label>
 
-                <select className="w-full rounded-2xl border border-white/10 bg-[#091827] px-5 py-3.5 text-white outline-none transition focus:border-[#086ED0]">
+                <select
+                  name="service"
+                  value={formData.service}
+                  onChange={handleChange}
+                  className="w-full rounded-2xl border border-white/10 bg-[#091827] px-5 py-3.5 text-white outline-none transition focus:border-[#086ED0]"
+                >
                   
                   <option>Branding Design</option>
                   <option>Logo Design</option>
@@ -241,6 +309,10 @@ export default function ContactPage() {
 
                 <textarea
                   rows="5"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
                   placeholder="Tell us about your project..."
                   className="w-full resize-none rounded-2xl border border-white/10 bg-[#091827] px-5 py-3.5 text-white outline-none transition focus:border-[#086ED0]"
                 />
@@ -249,15 +321,25 @@ export default function ContactPage() {
               {/* Button */}
               <button
                 type="submit"
-                className="group flex w-full items-center justify-center gap-2 rounded-full bg-[#FF6D00] px-8 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:bg-[#e65f00]"
+                disabled={isSending}
+                className="group flex w-full items-center justify-center gap-2 rounded-full bg-[#FF6D00] px-8 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:bg-[#e65f00] disabled:cursor-not-allowed disabled:opacity-70"
               >
-                Send Message
+                {isSending ? "Sending..." : "Send Message"}
 
-                <ArrowUpRight
-                  size={18}
-                  className="transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                />
+                {!isSending && (
+                  <ArrowUpRight
+                    size={18}
+                    className="transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                  />
+                )}
               </button>
+
+              {/* Success Message */}
+              {showSuccess && (
+                <p className="text-center text-sm font-medium text-green-400">
+                  Message sent successfully!
+                </p>
+              )}
             </form>
           </div>
         </div>

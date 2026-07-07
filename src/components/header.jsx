@@ -21,25 +21,18 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#03111F]/90 backdrop-blur-xl">
       
-<div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 md:px-6 py-4 md:py-5">        
-        {/* Logo */}
-     <Link href="/" className="flex items-center gap-2 md:gap-3">
-  <Image
-    src="/logo/branding_guide-removebg-preview.png"
-    alt="Branding Guide Logo"
-    width={70}
-    height={70}
-    priority
-    className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 object-contain"
-  />
-
-  <div className="leading-none">
-    <h1 className="text-lg sm:text-2xl md:text-3xl font-extrabold text-white">
-      Branding<span className="text-[#086ED0]">Guide</span>
-    </h1>
-
-  </div>
-</Link>
+<div className="relative mx-auto flex h-16 max-w-[1400px] items-center justify-between overflow-visible px-4 md:h-20 md:px-6">
+  {/* Logo */}
+  <Link href="/" className="flex items-center gap-2 md:gap-3">
+    <Image
+      src="/logo/235.png"
+      alt="Branding Guide Logo"
+      width={280}
+      height={280}
+      priority
+      className="h-28 w-28 object-contain sm:h-32 sm:w-32 md:h-36 md:w-36 lg:h-40 lg:w-40"
+    />
+  </Link>
 
         {/* Desktop Menu */}
        <nav className="ml-auto hidden items-center gap-10 lg:flex">
