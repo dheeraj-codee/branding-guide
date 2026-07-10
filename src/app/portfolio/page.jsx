@@ -5,64 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import CtaBanner from "@/components/CtaBanner";
+import { projects } from "@/data/portfolio-data";
 
 export default function PortfolioPage() {
-  const projects = [
-    {
-      title: "Coastal Realty — Property Listings Website",
-      category: "Website Development",
-      desc: "A fast, SEO-optimized real estate site with location-based landing pages and integrated property listings.",
-      slug: "coastal-realty-website",
-      image: "/images/portfolio/coastal-realty.jpg",
-    },
-    {
-      title: "Saffron Kitchen — Restaurant Brand Identity",
-      category: "Branding Design",
-      desc: "Complete visual identity — logo, menu design, and signage — built for a modern Indian restaurant.",
-      slug: "saffron-kitchen-branding",
-      image: "/images/portfolio/saffron-kitchen.jpg",
-    },
-    {
-      title: "Roast & Bloom — Coffee Packaging",
-      category: "Packaging Design",
-      desc: "Print-ready packaging designed for a specialty coffee brand's retail bags and subscription boxes.",
-      slug: "roast-bloom-packaging",
-      image: "/images/portfolio/roast-bloom.jpg",
-    },
-    {
-      title: "Pulse Fitness — Logo Collection",
-      category: "Logo Design",
-      desc: "A primary mark and sub-brand logo variations designed for a multi-location fitness studio chain.",
-      slug: "pulse-fitness-logo",
-      image: "/images/portfolio/pulse-fitness.jpg",
-    },
-    {
-      title: "Nova Skincare — Reels & Ad Edits",
-      category: "Video Editing",
-      desc: "A batch of Instagram Reels and paid ad creatives edited for a D2C skincare brand's product launch.",
-      slug: "nova-skincare-video",
-      image: "/images/portfolio/nova-skincare.jpg",
-    },
-    {
-      title: "Urban Bloom — Social Media Creatives",
-      category: "Social Media Design",
-      desc: "A month of Instagram and Facebook post templates designed for a plant and home decor store.",
-      slug: "urban-bloom-social",
-      image: "/images/portfolio/urban-bloom.jpg",
-    },
-  ];
+  const categories = Array.from(new Set(projects.map((p) => p.category)));
 
-  const categories = [
-    "All",
-    ...Array.from(new Set(projects.map((p) => p.category))),
-  ];
+  const [activeCategory, setActiveCategory] = useState(categories[0]);
 
-  const [activeCategory, setActiveCategory] = useState("All");
-
-  const filteredProjects =
-    activeCategory === "All"
-      ? projects
-      : projects.filter((p) => p.category === activeCategory);
+  const filteredProjects = projects.filter((p) => p.category === activeCategory);
 
   return (
     <main className="relative overflow-hidden bg-[#03111F]">
@@ -100,7 +50,7 @@ export default function PortfolioPage() {
       {/* ---------------- Filter Tabs ---------------- */}
       <section className="relative pb-4">
         <div className="mx-auto max-w-[1400px] px-6">
-          <div className="no-scrollbar flex gap-3 overflow-x-auto pb-2">
+          <div className="no-scrollbar flex justify-center gap-3 overflow-x-auto pb-2">
             {categories.map((cat) => (
               <button
                 key={cat}
@@ -123,7 +73,7 @@ export default function PortfolioPage() {
         <div className="mx-auto max-w-[1400px] px-6">
 
           <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-            {filteredProjects.map((project, index) => (
+            {filteredProjects.map((project) => (
               <Link
                 key={project.slug}
                 href={`/portfolio/${project.slug}`}
@@ -133,7 +83,7 @@ export default function PortfolioPage() {
                 {/* Image — clean, no clutter on top */}
                 <div className="relative aspect-[4/3] w-full overflow-hidden">
                   <Image
-                    src={project.image}
+                    src={project.images[0]}
                     alt={project.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"

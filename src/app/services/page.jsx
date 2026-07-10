@@ -5,17 +5,6 @@ import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 export default function ServicesPage() {
   const services = [
     {
-      title: "Website Development",
-      slug: "website-development",
-      desc: "We build fast, modern websites using Next.js and React — designed to load quickly, rank well, and turn visitors into customers.",
-      points: [
-        "Next.js / React development for fast, reliable performance",
-        "Mobile-first responsive layouts that work on every screen size",
-        "SEO-friendly structure with clean, semantic code",
-      ],
-      image: "/servicesbg-img/website.png",
-    },
-    {
       title: "Logo Design",
       slug: "logo-design",
       desc: "A logo is often the first thing people notice about a brand. We design distinct, memorable marks through research and iteration — not templates.",
@@ -38,15 +27,15 @@ export default function ServicesPage() {
       image: "/servicesbg-img/branding.png",
     },
     {
-      title: "Packaging Design",
-      slug: "packaging-design",
-      desc: "Packaging that stands out on a shelf and builds trust the moment someone picks up your product — built for print and production.",
+      title: "Website Development",
+      slug: "website-development",
+      desc: "We build fast, modern websites using Next.js and React — designed to load quickly, rank well, and turn visitors into customers.",
       points: [
-        "Print-ready dielines and realistic 3D mockups",
-        "Material and finish recommendations for production",
-        "Designs suited for retail, e-commerce, and food packaging",
+        "Next.js / React development for fast, reliable performance",
+        "Mobile-first responsive layouts that work on every screen size",
+        "SEO-friendly structure with clean, semantic code",
       ],
-      image: "/servicesbg-img/packaging.png",
+      image: "/servicesbg-img/website.png",
     },
     {
       title: "Video Editing",
@@ -58,6 +47,17 @@ export default function ServicesPage() {
         "Fast turnaround built around content calendars",
       ],
       image: "/servicesbg-img/videoediting.png",
+    },
+    {
+      title: "Packaging Design",
+      slug: "packaging-design",
+      desc: "Packaging that stands out on a shelf and builds trust the moment someone picks up your product — built for print and production.",
+      points: [
+        "Print-ready dielines and realistic 3D mockups",
+        "Material and finish recommendations for production",
+        "Designs suited for retail, e-commerce, and food packaging",
+      ],
+      image: "/servicesbg-img/packaging.png",
     },
     {
       title: "Social Media Design",

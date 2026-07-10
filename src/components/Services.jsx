@@ -6,16 +6,16 @@ import { ArrowUpRight } from "lucide-react";
 export default function Services() {
   const services = [
     {
-      title: "Branding Design",
-      desc: "Premium brand identity solutions designed to build trust and recognition.",
-      color: "from-[#086ED0]/20 to-[#086ED0]/5",
-      image: "/servicesbg-img/branding.png",
-    },
-    {
       title: "Logo Design",
       desc: "Modern and memorable logo designs crafted for growing businesses.",
       color: "from-[#FF6D00]/20 to-[#FF6D00]/5",
       image: "/servicesbg-img/logo.png",
+    },
+    {
+      title: "Branding Design",
+      desc: "Premium brand identity solutions designed to build trust and recognition.",
+      color: "from-[#086ED0]/20 to-[#086ED0]/5",
+      image: "/servicesbg-img/branding.png",
     },
     {
       title: "Website Development",

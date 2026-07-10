@@ -1,5 +1,4 @@
 import Hero from "@/components/Hero";
-import TrustedBrands from "@/components/TrustedBrands";
 import ClientLogos from "@/components/ClientLogos";
 import Services from "@/components/Services";
 import AboutSection from "@/components/AboutSection";
@@ -14,7 +13,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <TrustedBrands />
       <ClientLogos />
       <Services />
       <AboutSection />

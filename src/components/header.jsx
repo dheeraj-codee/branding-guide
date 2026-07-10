@@ -10,8 +10,8 @@ export default function Header() {
   const [serviceDropdown, setServiceDropdown] = useState(false);
 
   const services = [
-    "Branding Design",
     "Logo Design",
+    "Branding Design",
     "Website Development",
     "Video Editing",
     "Packaging Design",
