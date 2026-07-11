@@ -9,37 +9,37 @@ export default function Services() {
       title: "Logo Design",
       desc: "Modern and memorable logo designs crafted for growing businesses.",
       color: "from-[#FF6D00]/20 to-[#FF6D00]/5",
-      image: "/servicesbg-img/logo.png",
+      image: "/images/servicesbg-img/logo.png",
     },
     {
       title: "Branding Design",
       desc: "Premium brand identity solutions designed to build trust and recognition.",
       color: "from-[#086ED0]/20 to-[#086ED0]/5",
-      image: "/servicesbg-img/branding.png",
+      image: "/images/servicesbg-img/branding.png",
     },
     {
       title: "Website Development",
       desc: "Fast, responsive, and scalable websites built for modern brands.",
       color: "from-[#086ED0]/20 to-[#FF6D00]/10",
-      image: "/servicesbg-img/website.png",
+      image: "/images/servicesbg-img/website.png",
     },
     {
       title: "Video Editing",
       desc: "High-quality editing solutions for social media and promotional content.",
       color: "from-[#FF6D00]/20 to-[#086ED0]/10",
-      image: "/servicesbg-img/videoediting.png",
+      image: "/images/servicesbg-img/videoediting.png",
     },
     {
       title: "Packaging Design",
       desc: "Creative packaging experiences that improve product presentation.",
       color: "from-[#086ED0]/20 to-[#086ED0]/5",
-      image: "/servicesbg-img/packaging.png",
+      image: "/images/servicesbg-img/packaging.png",
     },
     {
       title: "Social Media Design",
       desc: "Engaging creatives designed to improve visibility and engagement.",
       color: "from-[#FF6D00]/20 to-[#FF6D00]/5",
-      image: "/servicesbg-img/social.png",
+      image: "/images/servicesbg-img/social.png",
     },
   ];
 

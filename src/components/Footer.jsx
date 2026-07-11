@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 import {
   FiInstagram,
@@ -25,9 +26,16 @@ export default function Footer() {
           
           {/* Brand */}
           <div>
-            <h2 className="text-3xl font-bold text-white">
-              Branding<span className="text-[#3B82F6]">Guide</span>
-            </h2>
+           <Link href="/" className="inline-block">
+  <Image
+    src="/logo/235.png"
+    alt="Branding Guide Logo"
+    width={280}
+    height={90}
+className="h-auto w-[130px] md:w-[150px] lg:w-[170px] object-contain"
+    priority
+  />
+</Link>
 
             <p className="mt-5 text-sm leading-7 text-white/60">
               Modern websites crafted with premium UI, fast performance,
@@ -192,9 +200,12 @@ export default function Footer() {
                     Email
                   </p>
 
-                  <h4 className="mt-1 text-sm font-medium text-white">
-                     sales@brandingguide.in
-                  </h4>
+                  <a
+  href="mailto:sales@brandingguide.in"
+  className="mt-1 block text-sm font-medium text-white transition hover:text-[#086ED0]"
+>
+  sales@brandingguide.in
+</a>
                 </div>
               </div>
 
@@ -210,9 +221,12 @@ export default function Footer() {
                     Phone
                   </p>
 
-                  <h4 className="mt-1 text-sm font-medium text-white">
-                    +91 98765 43210
-                  </h4>
+                  <a
+  href="tel:+919876543210"
+  className="mt-1 block text-sm font-medium text-white transition hover:text-[#FF6D00]"
+>
+  +91 98765 43210
+</a>
                 </div>
               </div>
 
@@ -228,9 +242,14 @@ export default function Footer() {
                     Location
                   </p>
 
-                  <h4 className="mt-1 text-sm font-medium text-white">
-                    Rajasthan, India
-                  </h4>
+                  <a
+  href="https://maps.google.com/?q=Ajmer, Rajasthan"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-1 block text-sm font-medium text-white transition hover:text-[#3B82F6]"
+>
+  Ajmer, Rajasthan
+</a>
                 </div>
               </div>
             </div>

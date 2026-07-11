@@ -106,7 +106,7 @@ export default function AboutSection() {
                   {/* Monogram — sharp render, no pixelation */}
                   <div className="flex flex-1 items-center justify-center">
   <Image
-    src="/logo/branding_guide-removebg-preview.png"
+    src="/logo/branding.jpeg"
     alt="Branding Guide Logo"
     width={320}
     height={320}
