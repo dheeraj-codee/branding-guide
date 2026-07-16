@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { Suspense, useMemo, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,17 +20,21 @@ const categories = [
 ];
 
 export default function PortfolioPage() {
+  return (
+    <Suspense fallback={null}>
+      <PortfolioContent />
+    </Suspense>
+  );
+}
+
+function PortfolioContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-
-  // URL-driven filter — fixes the "back button lands on wrong category" bug.
-  // The active tab now lives in the URL, not component state, so browser
-  // back/forward always restores the category you were actually looking at.
   const activeCategory = searchParams.get("category") || categories[0];
 
   const filteredProjects = useMemo(
     () => projects.filter((p) => p.category === activeCategory),
-    [activeCategory, projects]
+    [activeCategory]
   );
 
   function setActiveCategory(cat) {
@@ -115,10 +119,10 @@ export default function PortfolioPage() {
             </p>
           )}
 
-          {/* Bottom CTA */}
           <div className="mt-12">
             <CtaBanner />
           </div>
+
         </div>
       </section>
     </main>
