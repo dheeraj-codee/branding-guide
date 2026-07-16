@@ -1,5 +1,9 @@
 export const projects = [
   // ---------------- Logo Design (6) ----------------
+
+  
+  
+
   {
     title: "Palacio — Brand Logo & Stationery",
     category: "Branding Design",
@@ -96,82 +100,6 @@ export const projects = [
     ],
   },
 
-  // ---------------- Branding Design (6) ----------------
-  // {
-  //   title: "Saffron Kitchen — Restaurant Brand Identity",
-  //   category: "Branding Design",
-  //   desc: "Complete visual identity — logo, menu design, and signage — built for a modern Indian restaurant.",
-  //   slug: "saffron-kitchen-branding",
-  //   type: "image",
-  //   images: [
-  //     "/images/portfolio/saffron-kitchen-branding/1.jpg",
-  //     "/images/portfolio/saffron-kitchen-branding/2.jpg",
-  //     "/images/portfolio/saffron-kitchen-branding/3.jpg",
-  //     "/images/portfolio/saffron-kitchen-branding/4.jpg",
-  //     "/images/portfolio/saffron-kitchen-branding/5.jpg",
-  //   ],
-  // },
-  // {
-  //   title: "Brand 2 — Full Identity",
-  //   category: "Branding Design",
-  //   desc: "Complete brand identity including logo, color system, and print collateral.",
-  //   slug: "brand-2-branding",
-  //   type: "image",
-  //   images: [
-  //     "/images/portfolio/brand-2-branding/1.jpg",
-  //     "/images/portfolio/brand-2-branding/2.jpg",
-  //     "/images/portfolio/brand-2-branding/3.jpg",
-  //   ],
-  // },
-  // {
-  //   title: "Brand 3 — Full Identity",
-  //   category: "Branding Design",
-  //   desc: "Brand identity system with packaging and social templates.",
-  //   slug: "brand-3-branding",
-  //   type: "image",
-  //   images: [
-  //     "/images/portfolio/brand-3-branding/1.jpg",
-  //     "/images/portfolio/brand-3-branding/2.jpg",
-  //     "/images/portfolio/brand-3-branding/3.jpg",
-  //   ],
-  // },
-  // {
-  //   title: "Brand 4 — Full Identity",
-  //   category: "Branding Design",
-  //   desc: "Visual identity refresh for a growing retail brand.",
-  //   slug: "brand-4-branding",
-  //   type: "image",
-  //   images: [
-  //     "/images/portfolio/brand-4-branding/1.jpg",
-  //     "/images/portfolio/brand-4-branding/2.jpg",
-  //     "/images/portfolio/brand-4-branding/3.jpg",
-  //   ],
-  // },
-  // {
-  //   title: "Brand 5 — Full Identity",
-  //   category: "Branding Design",
-  //   desc: "Complete brand kit for a hospitality client.",
-  //   slug: "brand-5-branding",
-  //   type: "image",
-  //   images: [
-  //     "/images/portfolio/brand-5-branding/1.jpg",
-  //     "/images/portfolio/brand-5-branding/2.jpg",
-  //     "/images/portfolio/brand-5-branding/3.jpg",
-  //   ],
-  // },
-  // {
-  //   title: "Brand 6 — Full Identity",
-  //   category: "Branding Design",
-  //   desc: "End-to-end branding project covering logo, stationery, and packaging.",
-  //   slug: "brand-6-branding",
-  //   type: "image",
-  //   images: [
-  //     "/images/portfolio/brand-6-branding/1.jpg",
-  //     "/images/portfolio/brand-6-branding/2.jpg",
-  //     "/images/portfolio/brand-6-branding/3.jpg",
-  //   ],
-  // },
-
   // ---------------- Website Development (6) ----------------
   // These are rendered as direct external links on the listing page —
   // no image gallery, no detail page. Clicking the card opens liveUrl.
@@ -181,7 +109,7 @@ export const projects = [
     desc: "A fast, SEO-optimized real estate site with location-based landing pages and integrated property listings.",
     slug: "coastal-realty-website",
     type: "website",
-    liveUrl: "https://example.com", // replace with actual live site link
+    liveUrl: "https://www.bluenosemarketing.ca",
   },
   {
     title: "Bluenose Marketing — Digital Marketing Agency Website",
@@ -189,7 +117,7 @@ export const projects = [
     desc: "A full marketing agency website with services, work gallery, and lead-generation focused pages.",
     slug: "bluenose-marketing-website",
     type: "website",
-    liveUrl: "https://www.bluenosemarketing.ca",
+    liveUrl: "https://www.akshaybansal.ca",
   },
   {
     title: "Akshay Bansal — Personal Business Website",
@@ -197,7 +125,8 @@ export const projects = [
     desc: "A clean, fast personal/business website built to establish credibility and generate leads.",
     slug: "akshay-bansal-website",
     type: "website",
-    liveUrl: "https://www.akshaybansal.ca",
+        liveUrl: "https://www.paragindustries.in",
+
   },
   {
     title: "Parag Industries — Business Website",
@@ -205,7 +134,8 @@ export const projects = [
     desc: "A corporate website built to showcase products, services, and company credibility.",
     slug: "parag-industries-website",
     type: "website",
-    liveUrl: "https://www.paragindustries.in",
+        liveUrl: "https://www.jskpackaging.in",
+
   },
   {
     title: "JSK Packaging — Business Website",
@@ -213,7 +143,8 @@ export const projects = [
     desc: "A modern packaging company website with product catalog and inquiry-focused navigation.",
     slug: "jsk-packaging-website",
     type: "website",
-    liveUrl: "https://www.jskpackaging.in",
+        liveUrl: "https://www.vinayakaquaaroexperts.com",
+
   },
   {
     title: "Vinayak Aqua Aro Experts — Business Website",
@@ -221,7 +152,6 @@ export const projects = [
     desc: "A service business website built for lead generation and local visibility.",
     slug: "vinayak-aqua-aro-experts-website",
     type: "website",
-    liveUrl: "https://www.vinayakaquaaroexperts.com",
   },
 
   // ---------------- Video Editing (6) ----------------
