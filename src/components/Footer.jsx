@@ -225,7 +225,7 @@ className="h-auto w-[130px] md:w-[150px] lg:w-[170px] object-contain"
   href="tel:+919876543210"
   className="mt-1 block text-sm font-medium text-white transition hover:text-[#FF6D00]"
 >
-  +91 98765 43210
+  +91 8233949919
 </a>
                 </div>
               </div>
