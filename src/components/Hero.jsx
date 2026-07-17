@@ -7,9 +7,9 @@ import { ArrowRight, Play } from "lucide-react";
 
 // Yahan apni banner images ka path daal do (public/images/hero/ me rakh lena)
 const bannerImages = [
-  "/logo/service-banner.png",
-  "/logo/work-banner.png",
-  "/logo/branding-banner.png",
+  "/images/logo/service-banner.png",
+  "/images/logo/work-banner.png",
+  "/images/logo/branding-banner.png",
 ];
 
 export default function Hero() {
