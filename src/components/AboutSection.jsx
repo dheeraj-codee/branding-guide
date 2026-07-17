@@ -91,32 +91,16 @@ export default function AboutSection() {
               {/* Gradient */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#086ED0]/20 to-[#FF6D00]/10" />
 
-              {/* Image Area */}
+              {/* Image Area — image now fills/covers the entire box */}
               <div className="relative h-[500px] overflow-hidden rounded-[30px] bg-[#091827]">
-
-                {/* Glow */}
-                <div className="absolute left-[-50px] top-[-50px] h-[220px] w-[220px] rounded-full bg-[#086ED0]/20 blur-3xl" />
-                <div className="absolute bottom-[-50px] right-[-50px] h-[220px] w-[220px] rounded-full bg-[#FF6D00]/20 blur-3xl" />
-
-                {/* Content */}
-                <div className="relative flex h-full flex-col justify-between p-8">
-
-                 
-
-                  {/* Monogram — sharp render, no pixelation */}
-                  <div className="flex flex-1 items-center justify-center">
-  <Image
-    src="/logo/branding.jpeg"
-    alt="Branding Guide Logo"
-    width={320}
-    height={320}
-    className="h-auto w-[220px] object-contain transition-all duration-500 hover:scale-105 sm:w-[260px] lg:w-[300px]"
-    priority
-  />
-</div>
-              
-                </div>
-
+                <Image
+                  src="/images/logo/branding.jpeg"
+                  alt="Branding Guide Logo"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover transition-all duration-500 hover:scale-105"
+                  priority
+                />
               </div>
             </div>
 

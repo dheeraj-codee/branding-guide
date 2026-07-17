@@ -47,7 +47,7 @@ className="h-auto w-[130px] md:w-[150px] lg:w-[170px] object-contain"
               
               {/* LinkedIn */}
               <Link
-                href="https://linkedin.com/"
+                href="https://www.linkedin.com/in/kabir-jangid-55b51b400/"
                 target="_blank"
                 className="group flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70 transition-all duration-300 hover:border-blue-500 hover:bg-blue-500 hover:text-white"
               >
@@ -71,7 +71,7 @@ className="h-auto w-[130px] md:w-[150px] lg:w-[170px] object-contain"
 
               {/* Facebook */}
               <Link
-                href="https://facebook.com/"
+                href="https://www.facebook.com/profile.php?id=61579180005571"
                 target="_blank"
                 className="group flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70 transition-all duration-300 hover:border-blue-600 hover:bg-blue-600 hover:text-white"
               >

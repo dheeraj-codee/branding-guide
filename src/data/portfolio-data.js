@@ -1,9 +1,119 @@
 export const projects = [
-  // ---------------- Logo Design (6) ----------------
+  // ---------------- Logo Design (14) — non-clickable, single image only ----------------
+  {
+    title: "Logo Project 01",
+    category: "Logo Design",
+    desc: "Logo mark designed for a client brand.",
+    slug: "logo-01",
+    type: "logo",
+    images: ["/images/portfolio/logos/LOGO-01.jpg"],
+  },
+  {
+    title: "Logo Project 02",
+    category: "Logo Design",
+    desc: "Logo mark designed for a client brand.",
+    slug: "logo-02",
+    type: "logo",
+    images: ["/images/portfolio/logos/LOGO-02.jpg"],
+  },
+  {
+    title: "Logo Project 03",
+    category: "Logo Design",
+    desc: "Logo mark designed for a client brand.",
+    slug: "logo-03",
+    type: "logo",
+    images: ["/images/portfolio/logos/LOGO-03.jpg"],
+  },
+  {
+    title: "Logo Project 04",
+    category: "Logo Design",
+    desc: "Logo mark designed for a client brand.",
+    slug: "logo-04",
+    type: "logo",
+    images: ["/images/portfolio/logos/LOGO-04.jpg"],
+  },
+  {
+    title: "Logo Project 05",
+    category: "Logo Design",
+    desc: "Logo mark designed for a client brand.",
+    slug: "logo-05",
+    type: "logo",
+    images: ["/images/portfolio/logos/LOGO-05.jpg"],
+  },
+  {
+    title: "Logo Project 06",
+    category: "Logo Design",
+    desc: "Logo mark designed for a client brand.",
+    slug: "logo-06",
+    type: "logo",
+    images: ["/images/portfolio/logos/LOGO-06.jpg"],
+  },
+  {
+    title: "Logo Project 07",
+    category: "Logo Design",
+    desc: "Logo mark designed for a client brand.",
+    slug: "logo-07",
+    type: "logo",
+    images: ["/images/portfolio/logos/LOGO-07.jpg"],
+  },
+  {
+    title: "Logo Project 08",
+    category: "Logo Design",
+    desc: "Logo mark designed for a client brand.",
+    slug: "logo-08",
+    type: "logo",
+    images: ["/images/portfolio/logos/LOGO-08.jpg"],
+  },
+  {
+    title: "Logo Project 09",
+    category: "Logo Design",
+    desc: "Logo mark designed for a client brand.",
+    slug: "logo-09",
+    type: "logo",
+    images: ["/images/portfolio/logos/LOGO-09.jpg"],
+  },
+  {
+    title: "Logo Project 10",
+    category: "Logo Design",
+    desc: "Logo mark designed for a client brand.",
+    slug: "logo-10",
+    type: "logo",
+    images: ["/images/portfolio/logos/LOGO-10.jpg"],
+  },
+  {
+    title: "Logo Project 11",
+    category: "Logo Design",
+    desc: "Logo mark designed for a client brand.",
+    slug: "logo-11",
+    type: "logo",
+    images: ["/images/portfolio/logos/LOGO-11.jpg"],
+  },
+  {
+    title: "Logo Project 12",
+    category: "Logo Design",
+    desc: "Logo mark designed for a client brand.",
+    slug: "logo-12",
+    type: "logo",
+    images: ["/images/portfolio/logos/LOGO-12.jpg"],
+  },
+  {
+    title: "Logo Project 13",
+    category: "Logo Design",
+    desc: "Logo mark designed for a client brand.",
+    slug: "logo-13",
+    type: "logo",
+    images: ["/images/portfolio/logos/LOGO-13.jpg"],
+  },
+  {
+    title: "Logo Project 14",
+    category: "Logo Design",
+    desc: "Logo mark designed for a client brand.",
+    slug: "logo-14",
+    type: "logo",
+    images: ["/images/portfolio/logos/LOGO-14.jpg"],
+  },
 
-  
-  
-
+  // ---------------- Branding Design (6) ----------------
   {
     title: "Palacio — Brand Logo & Stationery",
     category: "Branding Design",
@@ -100,61 +210,64 @@ export const projects = [
     ],
   },
 
-  // ---------------- Website Development (6) ----------------
-  // These are rendered as direct external links on the listing page —
-  // no image gallery, no detail page. Clicking the card opens liveUrl.
-  {
-    title: "Coastal Realty — Property Listings Website",
-    category: "Website Development",
-    desc: "A fast, SEO-optimized real estate site with location-based landing pages and integrated property listings.",
-    slug: "coastal-realty-website",
-    type: "website",
-    liveUrl: "https://www.bluenosemarketing.ca",
-  },
+  
+// ---------------- Website Development (6) ----------------
   {
     title: "Bluenose Marketing — Digital Marketing Agency Website",
     category: "Website Development",
     desc: "A full marketing agency website with services, work gallery, and lead-generation focused pages.",
     slug: "bluenose-marketing-website",
     type: "website",
-    liveUrl: "https://www.akshaybansal.ca",
+    liveUrl: "https://www.bluenosemarketing.ca",
+    images: ["/images/portfolio/website/bluenose.png"],
   },
   {
-    title: "Akshay Bansal — Personal Business Website",
+    title: "Akshay Bansal — Real Estate Website",
     category: "Website Development",
     desc: "A clean, fast personal/business website built to establish credibility and generate leads.",
     slug: "akshay-bansal-website",
     type: "website",
-        liveUrl: "https://www.paragindustries.in",
-
+    liveUrl: "https://www.akshaybansal.ca",
+    images: ["/images/portfolio/website/bansal.png"],
   },
   {
-    title: "Parag Industries — Business Website",
+    title: "Parag Industries — Solar Website",
     category: "Website Development",
-    desc: "A corporate website built to showcase products, services, and company credibility.",
-    slug: "parag-industries-website",
+    desc: "A service business website built for lead generation and local visibility.",
+    slug: "parag-industries-solar-website",
     type: "website",
-        liveUrl: "https://www.jskpackaging.in",
-
+    liveUrl: "https://www.paragindustries.in",
+    images: ["/images/portfolio/website/parag.png"],
   },
   {
     title: "JSK Packaging — Business Website",
     category: "Website Development",
-    desc: "A modern packaging company website with product catalog and inquiry-focused navigation.",
+    desc: "A corporate website built to showcase products, services, and company credibility.",
     slug: "jsk-packaging-website",
     type: "website",
-        liveUrl: "https://www.vinayakaquaaroexperts.com",
-
+    liveUrl: "https://www.jskpackaging.in",
+    images: ["/images/portfolio/website/jsk.png"],
   },
   {
-    title: "Vinayak Aqua Aro Experts — Business Website",
+    title: "Vinayak Aqua Ro Experts — Business Website",
     category: "Website Development",
-    desc: "A service business website built for lead generation and local visibility.",
-    slug: "vinayak-aqua-aro-experts-website",
+    desc: "A modern packaging company website with product catalog and inquiry-focused navigation.",
+    slug: "vinayak-aqua-ro-experts-website",
     type: "website",
+    liveUrl: "https://www.vinayakaquaaroexperts.com",
+    images: ["/images/portfolio/website/vinayak.png"],
   },
-
-  // ---------------- Video Editing (6) ----------------
+  {
+    title: "Coastal Realty — Property Listings Website",
+    category: "Website Development",
+    desc: "A fast, SEO-optimized real estate site with location-based landing pages and integrated property listings.",
+    slug: "coastal-realty-website",
+    type: "website",
+    liveUrl: "", // ⚠️ baad me actual live URL yahan daal dena
+    // images: ["/images/portfolio/website/coastal.png"], // ⚠️ screenshot ready hone pe uncomment karo
+  },
+ 
+  // ---------------- Video Editing (8) — non-clickable ----------------
   {
     title: "Nova Skincare — Reels & Ad Edits",
     category: "Video Editing",
@@ -192,8 +305,7 @@ export const projects = [
     slug: "reel-project-4-video",
     type: "video",
     images: [
-      "https://res.cloudinary.com/hvuh5fau/video/upload/v1783768725/From_Klickpin.com-_Blessed_grace-filled_routines_that_feel_fresh_and_shareable_for_busy_days_for_peaceful_hearts-pin-id-1030057746038643324_kl4thb.mp4",
-    ],
+    "https://res.cloudinary.com/hvuh5fau/video/upload/v1784288466/VID-20260503-WA0014_udbbfz.mp4"    ],
   },
   {
     title: "Reel Project 5",
@@ -201,7 +313,7 @@ export const projects = [
     desc: "Brand story video edited for a client's YouTube channel.",
     slug: "reel-project-5-video",
     type: "video",
-    images: [],
+    images: ["https://res.cloudinary.com/hvuh5fau/video/upload/v1784289677/UI_09_02_1_1_xfkl84.mp4"],
   },
   {
     title: "Reel Project 6",
@@ -236,9 +348,8 @@ export const projects = [
     slug: "roast-bloom-packaging",
     type: "image",
     images: [
-      "/images/portfolio/roast-bloom-packaging/1.jpg",
-      "/images/portfolio/roast-bloom-packaging/2.jpg",
-      "/images/portfolio/roast-bloom-packaging/3.jpg",
+      "/images/portfolio/packaging/1.jpg",
+     
     ],
   },
   {
@@ -248,9 +359,8 @@ export const projects = [
     slug: "pack-2-packaging",
     type: "image",
     images: [
-      "/images/portfolio/pack-2-packaging/1.jpg",
-      "/images/portfolio/pack-2-packaging/2.jpg",
-      "/images/portfolio/pack-2-packaging/3.jpg",
+      "/images/portfolio/packaging/2.jpg",
+      
     ],
   },
   {
@@ -260,9 +370,8 @@ export const projects = [
     slug: "pack-3-packaging",
     type: "image",
     images: [
-      "/images/portfolio/pack-3-packaging/1.jpg",
-      "/images/portfolio/pack-3-packaging/2.jpg",
-      "/images/portfolio/pack-3-packaging/3.jpg",
+      "/images/portfolio/packaging/3.jpg",
+      
     ],
   },
   {
@@ -272,9 +381,7 @@ export const projects = [
     slug: "pack-4-packaging",
     type: "image",
     images: [
-      "/images/portfolio/pack-4-packaging/1.jpg",
-      "/images/portfolio/pack-4-packaging/2.jpg",
-      "/images/portfolio/pack-4-packaging/3.jpg",
+      "/images/portfolio/packaging/4.jpg",
     ],
   },
   {
@@ -284,9 +391,8 @@ export const projects = [
     slug: "pack-5-packaging",
     type: "image",
     images: [
-      "/images/portfolio/pack-5-packaging/1.jpg",
-      "/images/portfolio/pack-5-packaging/2.jpg",
-      "/images/portfolio/pack-5-packaging/3.jpg",
+      "/images/portfolio/packaging/5.jpg",
+     
     ],
   },
   {
@@ -296,9 +402,63 @@ export const projects = [
     slug: "pack-6-packaging",
     type: "image",
     images: [
-      "/images/portfolio/pack-6-packaging/1.jpg",
-      "/images/portfolio/pack-6-packaging/2.jpg",
-      "/images/portfolio/pack-6-packaging/3.jpg",
+         "/images/portfolio/packaging/6-01.jpg",
+,
+    ],
+  },
+   {
+    title: "Pack 7 — Product Packaging",
+    category: "Packaging Design",
+    desc: "Retail packaging redesign for an established product line.",
+    slug: "pack-6-packaging",
+    type: "image",
+    images: [
+         "/images/portfolio/packaging/6-02.jpg",
+,
+    ],
+  },
+   {
+    title: "Pack 8 — Product Packaging",
+    category: "Packaging Design",
+    desc: "Retail packaging redesign for an established product line.",
+    slug: "pack-6-packaging",
+    type: "image",
+    images: [
+         "/images/portfolio/packaging/6-03.jpg",
+,
+    ],
+  },
+   {
+    title: "Pack 9 — Product Packaging",
+    category: "Packaging Design",
+    desc: "Retail packaging redesign for an established product line.",
+    slug: "pack-6-packaging",
+    type: "image",
+    images: [
+         "/images/portfolio/packaging/6-04.jpg",
+,
+    ],
+  },
+   {
+    title: "Pack 10 — Product Packaging",
+    category: "Packaging Design",
+    desc: "Retail packaging redesign for an established product line.",
+    slug: "pack-6-packaging",
+    type: "image",
+    images: [
+         "/images/portfolio/packaging/6-05.jpg",
+,
+    ],
+  },
+   {
+    title: "Pack 11 — Product Packaging",
+    category: "Packaging Design",
+    desc: "Retail packaging redesign for an established product line.",
+    slug: "pack-6-packaging",
+    type: "image",
+    images: [
+         "/images/portfolio/packaging/6-06.jpg",
+,
     ],
   },
 

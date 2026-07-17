@@ -76,13 +76,16 @@ function PortfolioContent() {
 
       {/* ---------------- Filter Tabs ---------------- */}
       <section className="relative pb-4">
-        <div className="mx-auto max-w-[1400px] px-6">
-          <div className="no-scrollbar flex justify-center gap-3 overflow-x-auto pb-2">
+        <div className="mx-auto max-w-[1400px]">
+          <div
+            className="no-scrollbar flex snap-x snap-mandatory gap-3 overflow-x-auto px-6 pb-2 lg:justify-center"
+            style={{ scrollPaddingLeft: "1.5rem", scrollPaddingRight: "1.5rem" }}
+          >
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`shrink-0 whitespace-nowrap rounded-full border px-5 py-2.5 text-sm font-medium transition-all duration-300 ${
+                className={`shrink-0 snap-start whitespace-nowrap rounded-full border px-5 py-2.5 text-sm font-medium transition-all duration-300 ${
                   activeCategory === cat
                     ? "border-[#FF6D00] bg-[#FF6D00] text-white"
                     : "border-white/10 bg-white/[0.03] text-white/60 hover:border-white/20 hover:text-white"
@@ -106,7 +109,7 @@ function PortfolioContent() {
               ))}
             </div>
           ) : (
-            <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {filteredProjects.map((project) => (
                 <ProjectCard key={project.slug} project={project} />
               ))}
@@ -131,7 +134,10 @@ function PortfolioContent() {
 
 function ProjectCard({ project }) {
   // Website Development — no gallery, whole card opens the live site.
+  // Shows a real screenshot thumbnail if one is provided in the data
+  // (project.images[0]); falls back to the globe placeholder otherwise.
   if (project.type === "website") {
+    const hasScreenshot = project.images && project.images.length > 0;
     return (
       <a
         href={project.liveUrl}
@@ -139,10 +145,22 @@ function ProjectCard({ project }) {
         rel="noopener noreferrer"
         className="group relative overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03] backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:border-[#086ED0]/40"
       >
-        <div className="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden bg-gradient-to-br from-[#086ED0]/15 to-[#FF6D00]/10">
-          <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-[#086ED0]">
-            <Globe size={28} />
-          </div>
+        <div className="relative aspect-[4/3] w-full overflow-hidden bg-gradient-to-br from-[#086ED0]/15 to-[#FF6D00]/10">
+          {hasScreenshot ? (
+            <Image
+              src={project.images[0]}
+              alt={project.title}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+              className="object-cover object-top transition duration-700 group-hover:scale-105"
+            />
+          ) : (
+            <div className="flex h-full w-full items-center justify-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-[#086ED0]">
+                <Globe size={28} />
+              </div>
+            </div>
+          )}
           <div className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-black/40 text-white opacity-0 backdrop-blur-xl transition duration-300 group-hover:opacity-100">
             <ArrowUpRight size={16} />
           </div>
@@ -162,6 +180,23 @@ function ProjectCard({ project }) {
           </span>
         </div>
       </a>
+    );
+  }
+
+  // Logo Design — just the mark, nothing else. No title/desc, no gallery,
+  // no detail page — plain white box only (same treatment as the
+  // "Brands We Have Worked With" logo showcase).
+  if (project.type === "logo") {
+    return (
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[20px] bg-white transition duration-300 hover:-translate-y-1">
+        <Image
+          src={project.images[0]}
+          alt={project.title}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+          className="object-contain p-4"
+        />
+      </div>
     );
   }
 
@@ -266,9 +301,7 @@ function VideoReelCard({ project }) {
     );
   }
 
-  function toggleMute(e) {
-    e.preventDefault();
-    e.stopPropagation();
+  function toggleMute() {
     if (videoRef.current) {
       videoRef.current.muted = !videoRef.current.muted;
       setMuted(videoRef.current.muted);
@@ -276,10 +309,7 @@ function VideoReelCard({ project }) {
   }
 
   return (
-    <Link
-      href={`/portfolio/${project.slug}`}
-      className="group relative block aspect-[3/4] overflow-hidden rounded-[20px] border border-white/10 bg-black transition duration-500 hover:-translate-y-1 hover:border-[#086ED0]/40"
-    >
+    <div className="group relative aspect-[3/4] overflow-hidden rounded-[20px] border border-white/10 bg-black transition duration-500 hover:-translate-y-1 hover:border-[#086ED0]/40">
       <video
         ref={videoRef}
         src={project.images[0]}
@@ -293,12 +323,12 @@ function VideoReelCard({ project }) {
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
-      {/* Mute/unmute toggle — stops the click from also navigating */}
+      {/* Mute/unmute toggle — the only interactive element on this card */}
       <div
         role="button"
         tabIndex={0}
         onClick={toggleMute}
-        onKeyDown={(e) => e.key === "Enter" && toggleMute(e)}
+        onKeyDown={(e) => e.key === "Enter" && toggleMute()}
         className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-black/50 text-white backdrop-blur-xl transition hover:bg-[#FF6D00]"
       >
         {muted ? <VolumeX size={16} /> : <Volume2 size={16} />}
@@ -310,6 +340,6 @@ function VideoReelCard({ project }) {
         </p>
         <h3 className="mt-1 text-sm font-bold text-white">{project.title}</h3>
       </div>
-    </Link>
+    </div>
   );
 }
