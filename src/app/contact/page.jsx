@@ -149,62 +149,71 @@ export default function ContactPage() {
             </p>
 
             {/* Contact Info */}
-            <div className="mt-10 space-y-4">
-              
-              {/* Email */}
-              <div className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-[#086ED0]/10 p-4 transition hover:border-[#086ED0]/40 hover:bg-[#086ED0]/20">
-                
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#086ED0] text-white">
-                  <FiMail size={18} />
-                </div>
+        <div className="mt-10 space-y-4">
 
-                <div>
-                  <p className="text-xs uppercase tracking-[2px] text-[#086ED0]">
-                    Email Address
-                  </p>
+  {/* Email */}
+  <a
+    href="mailto:sales@brandingguide.in"
+    className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-[#086ED0]/10 p-4 transition hover:border-[#086ED0]/40 hover:bg-[#086ED0]/20"
+  >
+    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#086ED0] text-white">
+      <FiMail size={18} />
+    </div>
 
-                  <h3 className="mt-1 text-base font-medium text-white">
-                     sales@brandingguide.in
-                  </h3>
-                </div>
-              </div>
+    <div>
+      <p className="text-xs uppercase tracking-[2px] text-[#086ED0]">
+        Email Address
+      </p>
 
-              {/* Phone */}
-              <div className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-[#FF6D00]/10 p-4 transition hover:border-[#FF6D00]/40 hover:bg-[#FF6D00]/20">
-                
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FF6D00] text-white">
-                  <FiPhone size={18} />
-                </div>
+      <h3 className="mt-1 text-base font-medium text-white group-hover:text-[#086ED0] transition">
+        sales@brandingguide.in
+      </h3>
+    </div>
+  </a>
 
-                <div>
-                  <p className="text-xs uppercase tracking-[2px] text-[#FF6D00]">
-                    Phone Number
-                  </p>
+  {/* Phone */}
+  <a
+    href="tel:+918233949919"
+    className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-[#FF6D00]/10 p-4 transition hover:border-[#FF6D00]/40 hover:bg-[#FF6D00]/20"
+  >
+    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FF6D00] text-white">
+      <FiPhone size={18} />
+    </div>
 
-                  <h3 className="mt-1 text-base font-medium text-white">
-                    +91 98765 43210
-                  </h3>
-                </div>
-              </div>
+    <div>
+      <p className="text-xs uppercase tracking-[2px] text-[#FF6D00]">
+        Phone Number
+      </p>
 
-              {/* Location */}
-              <div className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:border-white/20 hover:bg-white/10">
-                
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white">
-                  <FiMapPin size={18} />
-                </div>
+      <h3 className="mt-1 text-base font-medium text-white group-hover:text-[#FF6D00] transition">
+        +91 8233949919
+      </h3>
+    </div>
+  </a>
 
-                <div>
-                  <p className="text-xs uppercase tracking-[2px] text-white/50">
-                    Location
-                  </p>
+  {/* Location */}
+  <a
+    href="https://maps.google.com/?q=Ajmer,Rajasthan"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:border-white/20 hover:bg-white/10"
+  >
+    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white">
+      <FiMapPin size={18} />
+    </div>
 
-                  <h3 className="mt-1 text-base font-medium text-white">
-                    Ajmer, Rajasthan
-                  </h3>
-                </div>
-              </div>
-            </div>
+    <div>
+      <p className="text-xs uppercase tracking-[2px] text-white/50">
+        Location
+      </p>
+
+      <h3 className="mt-1 text-base font-medium text-white group-hover:text-[#086ED0] transition">
+        Ajmer, Rajasthan
+      </h3>
+    </div>
+  </a>
+
+</div>
 
             {/* Social Icons */}
             <div className="mt-10">

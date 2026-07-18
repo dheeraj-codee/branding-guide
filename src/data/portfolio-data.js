@@ -112,6 +112,14 @@ export const projects = [
     type: "logo",
     images: ["/images/portfolio/logos/LOGO-14.jpg"],
   },
+   {
+    title: "Logo Project 15",
+    category: "Logo Design",
+    desc: "Logo mark designed for a client brand.",
+    slug: "logo-15",
+    type: "logo",
+    images: ["/images/portfolio/logos/LOGO-15.jpg"],
+  },
 
   // ---------------- Branding Design (6) ----------------
   {
@@ -460,6 +468,17 @@ export const projects = [
     type: "image",
     images: [
          "/images/portfolio/packaging/6-06.jpg",
+,
+    ],
+  },
+  {
+    title: "The Glowum — Product Packaging",
+    category: "Packaging Design",
+    desc: "Retail packaging redesign for an established product line.",
+    slug: "the-glowum-packaging",
+    type: "image",
+    images: [
+         "/images/portfolio/packaging/12.jpg",
 ,
     ],
   },
