@@ -3,16 +3,16 @@
 import Image from "next/image";
 
 const logos = [
-  "/clients/LOGO-01.jpg",
-  "/clients/LOGO-02.jpg",
-  "/clients/LOGO-03.jpg",
-  "/clients/LOGO-04.jpg",
-  "/clients/LOGO-05.jpg",
-  "/clients/LOGO-06.jpg",
-  "/clients/LOGO-07.jpg",
-  "/clients/LOGO-08.jpg",
-  "/clients/LOGO-09.jpg",
-  "/clients/LOGO-10.jpg",
+  "/images/clients/LOGO-01.jpg",
+  "/images/clients/LOGO-02.jpg",
+  "/images/clients/LOGO-03.jpg",
+  "/images/clients/LOGO-04.jpg",
+  "/images/clients/LOGO-05.jpg",
+  "/images/clients/LOGO-06.jpg",
+  "/images/clients/LOGO-07.jpg",
+  "/images/clients/LOGO-08.jpg",
+  "/images/clients/LOGO-09.jpg",
+  "/images/clients/LOGO-10.jpg",
 ];
 
 export default function TrustedBrands() {

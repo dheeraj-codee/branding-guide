@@ -14,11 +14,23 @@ import {
   FiMapPin,
 } from "react-icons/fi";
 
+// Service ke hisab se budget options — yahan se values change kar sakta hai
+const budgetOptions = {
+  "Branding Design": ["₹5,000 - ₹15,000", "₹15,000 - ₹30,000", "₹30,000 - ₹50,000", "₹50,000+"],
+  "Logo Design": ["₹2,000 - ₹5,000", "₹5,000 - ₹10,000", "₹10,000 - ₹20,000", "₹20,000+"],
+  "Website Development": ["₹15,000 - ₹30,000", "₹30,000 - ₹60,000", "₹60,000 - ₹1,00,000", "₹1,00,000+"],
+  "Video Editing": ["₹3,000 - ₹8,000", "₹8,000 - ₹15,000", "₹15,000 - ₹25,000", "₹25,000+"],
+  "Packaging Design": ["₹5,000 - ₹15,000", "₹15,000 - ₹30,000", "₹30,000 - ₹50,000", "₹50,000+"],
+  "Social Media design": ["₹5,000 - ₹10,000", "₹10,000 - ₹20,000", "₹20,000 - ₹35,000", "₹35,000+"],
+};
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     service: "Branding Design",
+    budget: budgetOptions["Branding Design"][0],
     message: "",
   });
   const [isSending, setIsSending] = useState(false);
@@ -26,6 +38,17 @@ export default function ContactPage() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
+    // Jab service change ho, budget ko us service ke first option pe reset kar do
+    if (name === "service") {
+      setFormData((prev) => ({
+        ...prev,
+        service: value,
+        budget: budgetOptions[value][0],
+      }));
+      return;
+    }
+
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -36,7 +59,9 @@ export default function ContactPage() {
     const templateParams = {
       name: formData.name,
       email: formData.email,
+      phone: formData.phone,
       service: formData.service,
+      budget: formData.budget,
       message: formData.message,
     };
 
@@ -54,7 +79,9 @@ export default function ContactPage() {
         setFormData({
           name: "",
           email: "",
+          phone: "",
           service: "Branding Design",
+          budget: budgetOptions["Branding Design"][0],
           message: "",
         });
 
@@ -100,7 +127,7 @@ export default function ContactPage() {
       {/* Contact Section */}
       <section className="relative pb-20">
         
-        <div className="mx-auto grid max-w-[1200px] gap-8 px-6 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-[1300px] gap-8 px-6 lg:grid-cols-[2fr_3fr]">
           
           {/* Left Side */}
           <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
@@ -243,61 +270,102 @@ export default function ContactPage() {
             </p>
 
             <form onSubmit={handleSubmit} className="mt-10 space-y-5">
-              
-              {/* Name */}
-              <div>
-                <label className="mb-2 block text-sm text-white/60">
-                  Full Name
-                </label>
 
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  placeholder="Enter your full name"
-                  className="w-full rounded-2xl border border-white/10 bg-[#091827] px-5 py-3.5 text-white outline-none transition focus:border-[#086ED0]"
-                />
+              {/* Row 1: Name + Email */}
+              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                
+                {/* Name */}
+                <div>
+                  <label className="mb-2 block text-sm text-white/60">
+                    Full Name
+                  </label>
+
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    placeholder="Enter your full name"
+                    className="w-full rounded-2xl border border-white/10 bg-[#091827] px-5 py-3.5 text-white outline-none transition focus:border-[#086ED0]"
+                  />
+                </div>
+
+                {/* Email */}
+                <div>
+                  <label className="mb-2 block text-sm text-white/60">
+                    Email Address
+                  </label>
+
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    placeholder="Enter your email address"
+                    className="w-full rounded-2xl border border-white/10 bg-[#091827] px-5 py-3.5 text-white outline-none transition focus:border-[#086ED0]"
+                  />
+                </div>
               </div>
 
-              {/* Email */}
-              <div>
-                <label className="mb-2 block text-sm text-white/60">
-                  Email Address
-                </label>
+              {/* Row 2: Phone + Service */}
+              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                
+                {/* Phone */}
+                <div>
+                  <label className="mb-2 block text-sm text-white/60">
+                    Phone Number
+                  </label>
 
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  placeholder="Enter your email address"
-                  className="w-full rounded-2xl border border-white/10 bg-[#091827] px-5 py-3.5 text-white outline-none transition focus:border-[#086ED0]"
-                />
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="+91 98765 43210"
+                    className="w-full rounded-2xl border border-white/10 bg-[#091827] px-5 py-3.5 text-white outline-none transition focus:border-[#086ED0]"
+                  />
+                </div>
+
+                {/* Service */}
+                <div>
+                  <label className="mb-2 block text-sm text-white/60">
+                    Select Service
+                  </label>
+
+                  <select
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    className="w-full rounded-2xl border border-white/10 bg-[#091827] px-5 py-3.5 text-white outline-none transition focus:border-[#086ED0]"
+                  >
+                    {Object.keys(budgetOptions).map((service) => (
+                      <option key={service} value={service}>
+                        {service}
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
 
-              {/* Service */}
+              {/* Row 3: Budget - akela, service ke hisab se dynamic */}
               <div>
                 <label className="mb-2 block text-sm text-white/60">
-                  Select Service
+                  Select Budget
                 </label>
 
                 <select
-                  name="service"
-                  value={formData.service}
+                  name="budget"
+                  value={formData.budget}
                   onChange={handleChange}
                   className="w-full rounded-2xl border border-white/10 bg-[#091827] px-5 py-3.5 text-white outline-none transition focus:border-[#086ED0]"
                 >
-                  
-                  <option>Branding Design</option>
-                  <option>Logo Design</option>
-                  <option>Website Development</option>
-                  <option>Video Editing</option>                
-                  <option>Packaging Design</option>
-                  <option>Social Media design</option>
-
+                  {budgetOptions[formData.service].map((range) => (
+                    <option key={range} value={range}>
+                      {range}
+                    </option>
+                  ))}
                 </select>
               </div>
 

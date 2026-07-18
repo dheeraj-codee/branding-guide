@@ -344,10 +344,10 @@ export const projects = [
 
   // ---------------- Packaging Design (6) ----------------
   {
-    title: "Roast & Bloom — Coffee Packaging",
+    title: "Edge Print Solutions — Packaging Design",
     category: "Packaging Design",
     desc: "Print-ready packaging designed for a specialty coffee brand's retail bags and subscription boxes.",
-    slug: "roast-bloom-packaging",
+    slug: "edge-print-packaging",
     type: "image",
     images: [
       "/images/portfolio/packaging/1.jpg",
@@ -355,10 +355,10 @@ export const projects = [
     ],
   },
   {
-    title: "Pack 2 — Product Packaging",
+    title: "Yummerry Organics — Packaging Design",
     category: "Packaging Design",
     desc: "Retail box design for a consumer goods brand.",
-    slug: "pack-2-packaging",
+    slug: "yummerry-organics-packaging",
     type: "image",
     images: [
       "/images/portfolio/packaging/2.jpg",
@@ -366,10 +366,10 @@ export const projects = [
     ],
   },
   {
-    title: "Pack 3 — Product Packaging",
+    title: "VM Royal — Packaging Design",
     category: "Packaging Design",
     desc: "Label and box design for a food and beverage brand.",
-    slug: "pack-3-packaging",
+    slug: "vm-royal-packaging",
     type: "image",
     images: [
       "/images/portfolio/packaging/3.jpg",
@@ -377,20 +377,20 @@ export const projects = [
     ],
   },
   {
-    title: "Pack 4 — Product Packaging",
+    title: "MAMA Crunch — Packaging Design",
     category: "Packaging Design",
     desc: "Cosmetic packaging design with premium finish mockups.",
-    slug: "pack-4-packaging",
+    slug: "mama-crunch-packaging",
     type: "image",
     images: [
       "/images/portfolio/packaging/4.jpg",
     ],
   },
   {
-    title: "Pack 5 — Product Packaging",
+    title: "Herbindya Organic — Packaging Design",
     category: "Packaging Design",
     desc: "Subscription box design for a lifestyle brand.",
-    slug: "pack-5-packaging",
+    slug: "herbindya-organic-packaging",
     type: "image",
     images: [
       "/images/portfolio/packaging/5.jpg",
@@ -398,10 +398,10 @@ export const projects = [
     ],
   },
   {
-    title: "Pack 6 — Product Packaging",
+    title: "JIffy Millet — Product Packaging",
     category: "Packaging Design",
     desc: "Retail packaging redesign for an established product line.",
-    slug: "pack-6-packaging",
+    slug: "jiffy-millet-packaging",
     type: "image",
     images: [
          "/images/portfolio/packaging/6-01.jpg",
@@ -409,10 +409,10 @@ export const projects = [
     ],
   },
    {
-    title: "Pack 7 — Product Packaging",
+    title: "Shri Gajanan Dairy — Product Packaging",
     category: "Packaging Design",
     desc: "Retail packaging redesign for an established product line.",
-    slug: "pack-6-packaging",
+    slug: "shri-gajanan-dairy-packaging",
     type: "image",
     images: [
          "/images/portfolio/packaging/6-02.jpg",
@@ -420,10 +420,10 @@ export const projects = [
     ],
   },
    {
-    title: "Pack 8 — Product Packaging",
+    title: "Nice — Product Packaging",
     category: "Packaging Design",
     desc: "Retail packaging redesign for an established product line.",
-    slug: "pack-6-packaging",
+    slug: "nice-packaging",
     type: "image",
     images: [
          "/images/portfolio/packaging/6-03.jpg",
@@ -431,10 +431,10 @@ export const projects = [
     ],
   },
    {
-    title: "Pack 9 — Product Packaging",
+    title: "Byanjanam — Product Packaging",
     category: "Packaging Design",
     desc: "Retail packaging redesign for an established product line.",
-    slug: "pack-6-packaging",
+    slug: "byanjanam-packaging",
     type: "image",
     images: [
          "/images/portfolio/packaging/6-04.jpg",
@@ -442,10 +442,10 @@ export const projects = [
     ],
   },
    {
-    title: "Pack 10 — Product Packaging",
+    title: "Jaggy Fit — Product Packaging",
     category: "Packaging Design",
     desc: "Retail packaging redesign for an established product line.",
-    slug: "pack-6-packaging",
+    slug: "jaggy-fit-packaging",
     type: "image",
     images: [
          "/images/portfolio/packaging/6-05.jpg",
@@ -453,10 +453,10 @@ export const projects = [
     ],
   },
    {
-    title: "Pack 11 — Product Packaging",
+    title: "Goluji Namkeen — Product Packaging",
     category: "Packaging Design",
     desc: "Retail packaging redesign for an established product line.",
-    slug: "pack-6-packaging",
+    slug: "goluji-namkeen-packaging",
     type: "image",
     images: [
          "/images/portfolio/packaging/6-06.jpg",
